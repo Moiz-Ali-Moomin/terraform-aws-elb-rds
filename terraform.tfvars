@@ -1,4 +1,4 @@
-aws_region="ap-south-1"
+aws_region="ap-southeast-1"
 webservers_ami="ami-0e8e39877665a7c92"
 sg_id="sg-040bb199e4dc62b01"
 instance_type="t2.micro"
