@@ -1,8 +1,9 @@
+
 # Create a new load balancer
 resource "aws_elb" "terra-elb" {
   name               = "terra-elb"
   #availability_zones = ["${var.azs}"]
-  subnets = ["subnet-042ded657db2e5d7f",  "subnet-098ebd6cc26a1c9fe"]
+  subnets = "${var.subnet_id}"
   security_groups = ["${var.sg_id}"]
 
   listener {
@@ -28,6 +29,3 @@ resource "aws_elb" "terra-elb" {
   connection_draining_timeout = 400
 
 }
-
-
- 
